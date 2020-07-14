@@ -1,14 +1,22 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
+// let votingAge = 18 ;
+// let age = 20;
+// if (age > votingAge){
+//     console.log(true);
+// }
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 
-
+let oneFirst = 18;
+let twoSec = 20;
+    if (twoSec > oneFirst){
+    console.log("oneFirst= ",oneFirst=twoSec);
+    }
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
@@ -19,19 +27,23 @@
 
 //Task d: Write a function to multiply a*b 
 
-
+// function Multi (a, b){
+//     return a *b;
+// }
+// console.log (Multi(8, 9));
 
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
-
-
-
-
-/************************************************************** Task 3 **************************************************************/
+// let myAge ;
+// let dogAge = 7 ; 
+// function myDog (myAge){
+//     return "My age in dog's age is" + " " + myAge * dogAge ; 
+// }
+// console.log(myDog(24));
+// // /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
 
@@ -41,6 +53,14 @@
 // 6 - 10 lbs - 4% of their body weight 
 // 11 - 15 lbs - 3% of their body weight 
 // > 15lbs - 2% of their body weight 
+
+function dogFood (dogWeight, Age){
+    if(dogWeight <= 5 && Age >= 1) {
+        return (dogWeight * 5 / 100 );
+    }
+}
+    // }else if(5< dogWeight <=10 && Age >= 1){
+console.log (dogFood (3, 1));
 
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
@@ -110,9 +130,4 @@
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
-//update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
-
+//update your rock papers sissors code below to take a prompt from a user using the window object 
