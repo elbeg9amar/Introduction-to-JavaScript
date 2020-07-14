@@ -1,11 +1,11 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-// let votingAge = 18 ;
-// let age = 20;
-// if (age > votingAge){
-//     console.log(true);
-// }
+let votingAge = 18 ;
+let age = 20;
+if (age > votingAge){
+    console.log(true);
+}
 
 
 
@@ -27,22 +27,22 @@ let twoSec = 20;
 
 //Task d: Write a function to multiply a*b 
 
-// function Multi (a, b){
-//     return a *b;
-// }
-// console.log (Multi(8, 9));
+function Multi (a, b){
+    return a *b;
+}
+console.log (Multi(8, 9));
 
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-// let myAge ;
-// let dogAge = 7 ; 
-// function myDog (myAge){
-//     return "My age in dog's age is" + " " + myAge * dogAge ; 
-// }
-// console.log(myDog(24));
+let myAge ;
+let dogAge = 7 ; 
+function myDog (myAge){
+    return "My age in dog's age is" + " " + myAge * dogAge ; 
+}
+console.log(myDog(24));
 // // /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
@@ -54,13 +54,22 @@ let twoSec = 20;
 // 11 - 15 lbs - 3% of their body weight 
 // > 15lbs - 2% of their body weight 
 
-function dogFood (dogWeight, Age){
-    if(dogWeight <= 5 && Age >= 1) {
+function dogFood (dogWeight, AgeinM){
+    if(dogWeight <= 5 && AgeinM >= 12 ){
         return (dogWeight * 5 / 100 );
+    }else if(dogWeight === 6 || dogWeight <=10 && AgeinM >= 12){ return (dogWeight * 4 / 100)
+    }else if (dogWeight === 11 || dogWeight <= 15 && AgeinM>=12){
+        return (dogWeight *3 / 100)
+    }else if(dogWeight >15 && AgeinM >=12) {
+        return (dogWeight *2 / 100)
+    }else if (dogWeight && AgeinM === 2 || AgeinM <=4){
+        return (dogWeight * 10 /100)
+    }else if (dogWeight && AgeinM === 4 || AgeinM <=7){
+        return (dogWeight * 5 /100)
+    }else if (dogWeight && AgeinM ===7 || AgeinM <=12){
+        return (dogWeight * 4 /100)
     }
-}
-    // }else if(5< dogWeight <=10 && Age >= 1){
-console.log (dogFood (3, 1));
+} console.log (dogFood (15, 12));
 
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
