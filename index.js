@@ -56,20 +56,20 @@ console.log(myDog(24));
 
 function dogFood (dogWeight, AgeinM){
     if(dogWeight <= 5 && AgeinM >= 12 ){
-        return (dogWeight * 5 / 100 );
-    }else if(dogWeight === 6 || dogWeight <=10 && AgeinM >= 12){ return (dogWeight * 4 / 100)
+        return (dogWeight * 0.05 );
+    }else if(dogWeight === 6 || dogWeight <=10 && AgeinM >= 12){ return (dogWeight * 0.04)
     }else if (dogWeight === 11 || dogWeight <= 15 && AgeinM>=12){
-        return (dogWeight *3 / 100)
+        return (dogWeight *0.03)
     }else if(dogWeight >15 && AgeinM >=12) {
-        return (dogWeight *2 / 100)
+        return (dogWeight *0.02)
     }else if (dogWeight && AgeinM === 2 || AgeinM <=4){
-        return (dogWeight * 10 /100)
+        return (dogWeight * 0.1)
     }else if (dogWeight && AgeinM === 4 || AgeinM <=7){
-        return (dogWeight * 5 /100)
+        return (dogWeight * 0.05)
     }else if (dogWeight && AgeinM ===7 || AgeinM <=12){
-        return (dogWeight * 4 /100)
+        return (dogWeight * 0.04)
     }
-} console.log (dogFood (15, 12));
+} console.log ((dogFood (15, 12)));
 
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
