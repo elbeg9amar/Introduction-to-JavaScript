@@ -20,6 +20,8 @@ let twoSec = 20;
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+let integer = parseInt("1999");
+console.log(integer);
 
 
 
@@ -57,17 +59,17 @@ console.log(myDog(24));
 function dogFood (dogWeight, AgeinM){
     if(dogWeight <= 5 && AgeinM >= 12 ){
         return (dogWeight * 0.05 );
-    }else if(dogWeight === 6 || dogWeight <=10 && AgeinM >= 12){ return (dogWeight * 0.04)
+    }else if(dogWeight === 6 || dogWeight <=10 && AgeinM >= 12){ return (dogWeight * 0.04);
     }else if (dogWeight === 11 || dogWeight <= 15 && AgeinM>=12){
-        return (dogWeight *0.03)
+        return (dogWeight *0.03);
     }else if(dogWeight >15 && AgeinM >=12) {
-        return (dogWeight *0.02)
+        return (dogWeight *0.02);
     }else if (dogWeight && AgeinM === 2 || AgeinM <=4){
-        return (dogWeight * 0.1)
+        return (dogWeight * 0.1);
     }else if (dogWeight && AgeinM === 4 || AgeinM <=7){
-        return (dogWeight * 0.05)
+        return (dogWeight * 0.05);
     }else if (dogWeight && AgeinM ===7 || AgeinM <=12){
-        return (dogWeight * 0.04)
+        return (dogWeight * 0.04);
     }
 } console.log ((dogFood (15, 12)));
 
@@ -88,16 +90,18 @@ function dogFood (dogWeight, AgeinM){
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-function myHand(myOwn){
-    let comHand= Math.floor((Math.random() * 3)+1);
-    if (comHand === 2 && myOwn){
-        return "I win";
-    }else if (comHand===1 && myOwn){
-        return "I lost";
-    }else if (comHand===0 && myOwn){
-        return "Tie"
+function myHand(rock){
+    let comHand= Math.floor((Math.random() * 3));
+    if (comHand === 2 && rock){
+        return "Scissor + Rock === I win";
+    }else if (comHand===1 && rock){
+        return "Paper + Rock === I lost";
+    }else if (comHand===0 && rock){
+        return "Rock + Rock === Tie";
     }
-} console.log(myHand(2))
+} 
+for( let rock = 1 ; rock <=5; rock++){
+console.log(myHand(rock));}
 
   
 
@@ -105,7 +109,7 @@ function myHand(myOwn){
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 function MiConvert (km){
-    return Math.abs(km * 0.621271)
+    return Math.abs(km * 0.621271);
 }
 console.log(MiConvert(5))
 
@@ -114,7 +118,7 @@ console.log(MiConvert(5))
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
 function CmConve(foot){
-    return Math.abs(foot * 30.48)
+    return Math.abs(foot * 30.48);
 }
 
 console.log(CmConve(9))
@@ -123,11 +127,15 @@ console.log(CmConve(9))
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
-
-
-
-
+ 
+  function annoyingSong(numbers){
+    let $ = numbers - 1 
+       return `${numbers}=on the wall, ${$}=left on the wall, ${numbers} =was on the wall,`; 
+       i--
+    }
+    
+    for( let numbers=10; numbers>=0; numbers--){
+console.log(annoyingSong(numbers));}
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
@@ -138,19 +146,19 @@ console.log(CmConve(9))
 //and anything below 60 should be F
 function myGrade(grade)  {
     if (grade >= 90){
-        return 'Your grade is A'
+        return 'Your grade is A';
     }else if (80<= grade && grade < 90 ){
-        return "Your grade is B"
+        return "Your grade is B";
     }else if (70 <=  grade && grade <80){
-        return "Your grade is C"
+        return "Your grade is C";
     }else if (60 <= grade && grade < 70){
-        return "Your grade is D"
+        return "Your grade is D";
     }else if (grade < 60 ){
-        return "Your grade is F"
+        return "Your grade is F";
     }
 }
 
-  console.log(myGrade(92))
+  console.log(myGrade(80))
   
 
 /************************************************************** Stretch **************************************************************/
