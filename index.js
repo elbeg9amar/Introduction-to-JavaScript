@@ -88,23 +88,36 @@ function dogFood (dogWeight, AgeinM){
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+function myHand(myOwn){
+    let comHand= Math.floor((Math.random() * 3)+1);
+    if (comHand === 2 && myOwn){
+        return "I win";
+    }else if (comHand===1 && myOwn){
+        return "I lost";
+    }else if (comHand===0 && myOwn){
+        return "Tie"
+    }
+} console.log(myHand(2))
 
-  
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
-
+function MiConvert (km){
+    return Math.abs(km * 0.621271)
+}
+console.log(MiConvert(5))
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function CmConve(foot){
+    return Math.abs(foot * 30.48)
+}
 
-
-
+console.log(CmConve(9))
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
@@ -123,9 +136,21 @@ function dogFood (dogWeight, AgeinM){
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
+function myGrade(grade)  {
+    if (grade >= 90){
+        return 'Your grade is A'
+    }else if (80<= grade && grade < 90 ){
+        return "Your grade is B"
+    }else if (70 <=  grade && grade <80){
+        return "Your grade is C"
+    }else if (60 <= grade && grade < 70){
+        return "Your grade is D"
+    }else if (grade < 60 ){
+        return "Your grade is F"
+    }
+}
 
-  
+  console.log(myGrade(92))
   
 
 /************************************************************** Stretch **************************************************************/
